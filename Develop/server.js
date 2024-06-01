@@ -5,7 +5,7 @@ const notes = require('./db/db.json')
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 // Define the PORT number
-const PORT = process.env.PORT || 3001;
+const PORT = 3001;
 // call Express
 const app = express();
 
@@ -29,12 +29,13 @@ app.get('/api/notes', (req, res => {
     return res.json(notes);
 }));
 
-//POST request to add notes
-app.post('/api/notes', (req, res => {
-    console.info(`${req.method} request received to add notes`);
+
+// //POST request to add notes
+// app.post('/api/notes', (req, res => {
+//     console.info(`${req.method} request received to add notes`);
 
 
-}))
+// }))
 
 
 
