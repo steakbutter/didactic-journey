@@ -29,6 +29,13 @@ app.get('/api/notes', (req, res => {
     return res.json(notes);
 }));
 
+//POST request to add notes
+app.post('/api/notes', (req, res => {
+    console.info(`${req.method} request received to add notes`);
+
+
+}))
+
 
 
 // Listen to PORT
