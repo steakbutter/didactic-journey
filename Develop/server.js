@@ -5,7 +5,7 @@ const notes = require('./db/db.json')
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 // Define the PORT number
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 // call Express
 const app = express();
 
