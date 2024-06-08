@@ -1,11 +1,9 @@
 const express = require('express');
 const path = require('path');
-const fs = require('fs');
 const api = require('./routes/index');
 
 
-// Helper method for generating unique ids
-const uuid = require('./helpers/uuid');
+
 // Define the PORT number
 const PORT = process.env.PORT || 3001;
 // call Express
@@ -16,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 // Middleware to serve up static assets from the public folder
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
 // GET request for notes.html
 app.get('/notes', (req, res) => 
