@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 // Middleware to serve up static assets from the public folder
-// app.use(express.static('public'));
+app.use(express.static('public'));
 
 // GET request for notes.html
 app.get('/notes', (req, res) => 
