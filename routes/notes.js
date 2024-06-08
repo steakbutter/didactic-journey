@@ -1,7 +1,7 @@
 const notes = require('express').Router();
 
 // Helper method for generating unique ids
-const uuid = require('../helpers/uuid');
+const uniqueId = uuidv4();
 
 // function to help read and write JSON file 
 const { readFromFile, readAndAppend} = require('../helpers/fsUtils');
@@ -22,7 +22,7 @@ notes.post('/api/notes', (req,res) => {
         const newNote = {
             noteTitle,
             noteText,
-            note_id: uuid(),
+            note_id: uniqueId(),
         };
 
         readAndAppend(newNote, './db/db.json');
