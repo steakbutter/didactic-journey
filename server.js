@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const api = require('./routes/index');
 
 
 // Helper method for generating unique ids
@@ -24,7 +25,8 @@ app.get('*', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-
+// Send all the requests that begin with /api to the index.js in routes folder
+app.use('/api', api);
 
 // Listen to PORT
 app.listen(PORT, () =>
