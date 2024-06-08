@@ -2,12 +2,10 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+'Express Note and Butter Taker' is a note taker website application using express. The reason behind this project was to put in practice the connection between the frontend and backend of coding. <br>
+Using this note taker will make it easier to add daily task that can be useful to be more productive on a daily basis. <br>
+By building this project, I learned how the backend compliments the frontend to execute a more complete website. <br>
+Even though backend applications are not seen by the public/user, it is important as a developer to see how the backend is essential to the frontend. 
 
 ## Table of Contents (Optional)
 
@@ -20,28 +18,17 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Run 'npm install express' to install express <br>
+Run 'npm install uuid' for the unique id generator <br>
 
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Go to the website link: <br>
+Enter the note title and note text, then submit new note.
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+N/A.
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
+N/A.
