@@ -1,7 +1,7 @@
 const notes = require('express').Router();
-const express = require('express');
-const fs = require('fs');
-const app = express();
+// const express = require('express');
+// const fs = require('fs');
+// const app = express();
 // Helper method for generating unique ids
 const uniqueId = require('uuid');
 
@@ -26,7 +26,7 @@ const { readFromFile, readAndAppend} = require('../helpers/fsUtils');
 notes.get('/api/notes', (req, res) => {
     console.info(`${req.method} request received for notes`);
 
-    readFromFile('db\db.json').then((data) => res.json(JSON.parse(data)));
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // POST route for submitting notes
@@ -34,23 +34,24 @@ notes.post('/api/notes', (req,res) => {
     console.info(`${req.method} request received to submit notes`);
     // destructuring for items in req.body
     const {noteTitle, noteText} = req.body;
-    if (noteTitle && noteText) {
+    if (req.body) {
         const newNote = {
             noteTitle,
             noteText,
             note_id: uniqueId(),
         };
 
-        readAndAppend(newNote, 'db\db.json');
-        const response = {
-            status: 'success',
-            body: newNote,
-        };
+    //     const noteString = JSON.stringify(newNote);
+    //     fs.writeFile(`./db/${newNote.noteTitle, newNote.noteText, newNote.note_id}.json`, noteString, (err) =>
+    //     err
+    //     ? console.error(err)
+    // : console.log(`Note for ${newNote.noteTitle} has been written`));
 
-        res.json(response);
-    } else {
-        res.json('Error in posting Notes');
-    }
+        readAndAppend(newNote, './db/db.json');
+        res.json(`Note added succesfully`);
+} else {
+    res.error('Error in adding note');
+} 
 });
 
 module.exports = notes;

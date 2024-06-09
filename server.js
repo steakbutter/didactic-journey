@@ -1,13 +1,16 @@
 const express = require('express');
 const path = require('path');
-const api = require('./routes/index');
+// call Express
+const app = express();
+// const api = require('./routes/index');
+
+// call index.js from routes folder
+const notesRoutes = require('./routes/index')
 
 
 
 // Define the PORT number
 const PORT = process.env.PORT || 3001;
-// call Express
-const app = express();
 
 // Middleware for parsing application/json and urlencoded data
 app.use(express.json());
@@ -17,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Send all the requests that begin with /api to the index.js in routes folder
-app.use('/api', api);
+app.use('/api/notes', notesRoutes);
 
 // GET request for notes.html
 app.get('/notes', (req, res) =>

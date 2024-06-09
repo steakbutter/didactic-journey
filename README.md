@@ -2,10 +2,10 @@
 
 ## Description
 
-'Express Note and Butter Taker' is a note taker website application using express. The reason behind this project was to put in practice the connection between the frontend and backend of coding. <br>
+'Express Note and Butter Taker' is a note taker website application using express. The reason behind this project was to put in practice the connection between the front end and back end of coding. <br>
 Using this note taker will make it easier to add daily task that can be useful to be more productive on a daily basis. <br>
-By building this project, I learned how the backend compliments the frontend to execute a more complete website. <br>
-Even though backend applications are not seen by the public/user, it is important as a developer to see how the backend is essential to the frontend. 
+By building this project, I learned how the back end compliments the front end to execute a more complete website. <br>
+Even though back end applications are not seen by the public/user, it is important as a developer to see how the back end is essential to the front end. 
 
 ## Table of Contents (Optional)
 
