@@ -26,7 +26,13 @@ note.post('/', (req, res) => {
     } else {
         res.error('Error in adding note');
     }
+    // DELETE a post 
+    note.delete('/api/notes/:id', (req, res) => {
+        const id = nNote_id.value
+        res.json({ message: `Note with id ${id} deleted succesfully`});
+    });
 });
+
 
 module.exports = note;
 
