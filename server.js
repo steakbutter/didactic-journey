@@ -22,6 +22,7 @@ app.use(express.static('public'));
 // Send all the requests that begin with /api to the index.js in routes folder
 app.use('/api/notes', notesRoutes);
 
+
 // GET request for notes.html
 app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, '/public/notes.html'))
