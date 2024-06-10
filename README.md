@@ -24,8 +24,8 @@ Run 'npm install uuid' for the unique id generator <br>
 
 ## Usage
 Go to the website link: https://didactic-journey-3.onrender.com <br>
-Enter the note title and note text, then submit new note.
-
+Enter the note title and note text, then submit new note. <br><br>
+![alt text](<helpers/cha 11 example.gif>)
 ## Credits
 
 N/A.
