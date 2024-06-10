@@ -3,7 +3,7 @@ const path = require('path');
 // call Express
 const app = express();
 // call routes
-const notesRead = require('./routes/index');
+// const notesRead = require('./routes/index');
 const noteR = require('./routes/notes');
 
 
@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 // GET and POST requests using the index.js from the routes folder
 app.use('/api/notes', noteR);
-app.use('/api/notes', notesRead);
+// app.use('/api/notes', notesRead);
 
 // GET request for notes.html
 app.get('/notes', (req, res) =>
