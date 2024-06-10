@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
-const noteRouter = require('../routes/notes');
+
 
 router.get('/', (req, res) => {
     fs.readFile('db/db.json', 'utf8', (err, data) => {
@@ -15,6 +15,6 @@ router.get('/', (req, res) => {
     });
 });
 
-router.use('/', noteRouter);
+
 
 module.exports = router;

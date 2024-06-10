@@ -1,14 +1,15 @@
-const note = require('express').Router();
+const express = require('express');
+const router = express.Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
 // GET route for retreiving all notes
-note.get('/', (req, res) => {
+router.get('/', (req, res) => {
     readFromFile('db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // POST route for a new note
-note.post('/', (req, res) => {
+router.post('/', (req, res) => {
     console.log(req.body);
 
     const { title, text, nNote } = req.body;
@@ -26,14 +27,11 @@ note.post('/', (req, res) => {
     } else {
         res.error('Error in adding note');
     }
-    // DELETE a post 
-    note.delete('/api/notes/:id', (req, res) => {
-        const id = nNote_id.value
-        res.json({ message: `Note with id ${id} deleted succesfully`});
-    });
+   
 });
 
 
-module.exports = note;
+
+module.exports = router;
 
 
